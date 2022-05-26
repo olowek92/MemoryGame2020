@@ -1,7 +1,12 @@
 import React from "react";
+import "./Button.css";
 
 function Button({ handleButtonClick }) {
-  return <a onClick={handleButtonClick}>Play again</a>;
+  return (
+    <button className="button" onClick={handleButtonClick}>
+      Play again
+    </button>
+  );
 }
 
 export default Button;
