@@ -1,0 +1,86 @@
+body {
+  background-color: bisque;
+  width: 100%;
+}
+
+/* Board początek */
+
+.board {
+  margin: 0 auto;
+  padding: 0;
+  width: 452px;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+}
+
+.flip-container {
+  perspective: 1000px;
+  display: inline-block;
+  border: 1px solid white;
+  background-color: black;
+}
+
+.flip-container.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.back {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+/* Board koniec */
+
+/* Result początek */
+
+h1 {
+  color: indianred;
+  text-align: center;
+}
+
+i {
+  margin-left: 10px;
+  font-size: 34px;
+  color: indianred;
+}
+
+/* Result koniec */
+
+/* Button początek */
+
+a {
+  position: absolute;
+  top: 102%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 2px solid indianred;
+  font-size: 20px;
+  background-color: bisque;
+  cursor: pointer;
+  color: indianred;
+}
+
+/* Button koniec */
